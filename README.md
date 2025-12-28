@@ -23,7 +23,7 @@ WEATHER_API_KEY=<KEY Created in Step 2>
 
 #### Run as application
 1. Close repository
-2. cd flask-python-app
+2. cd python-fastapi-app
 3. Create virtual env
 ```
 python -m .venv venv
@@ -31,7 +31,7 @@ source .venv/bin/activate
 ```
 4. run the following command to start the applicatioon
 ```
-gunicorn wsgi:app
+python run.py
 ```
 API's:
 ```
@@ -50,10 +50,10 @@ http://0.0.0.0:8080/api/v1/weather?city=nellore
 
 #### Run as container
 ```
-docker build -t flask-python-app .
-docker run -d -p 80:8080 flask-python-app
+docker build -t python-fastapi-app .
+docker run -d -p 80:8080 python-fastapi-app
 docker ps
-docker logs -f flask-python-app
+docker logs -f python-fastapi-app
 ```
 
 API's:
